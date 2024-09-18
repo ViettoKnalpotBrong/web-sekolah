@@ -1,5 +1,5 @@
 .banner-section {
-  position: absolute;
+  position: static;
   overflow: hidden; /* Pastikan tidak ada elemen yang meluber dari kontainer */
 }
 
