@@ -1,0 +1,14 @@
+<div class="jurusan-section" id="jurusan">
+    <div class="container">
+        <h2>kompetensi Keahlian</h2>
+        <div class="jurusan-grid">
+            <div class="jurusan-card" *ngFor="let jurusan of jurusanList">
+                <img [src]="jurusan.gambar" [alt]="jurusan.nama" class="jurusan-image"/>
+                <div class="jurusan-info">
+                    <h3>{{ jurusan.nama }}</h3>
+                    <p>{{ jurusan.deskripsi }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

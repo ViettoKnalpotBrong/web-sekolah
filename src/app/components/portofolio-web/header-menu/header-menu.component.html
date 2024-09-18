@@ -1,0 +1,30 @@
+<mat-toolbar class="header-menu-section" [class.sticky-nav]="bannerIsScroll" id="header-menu-Id">
+  <img src="https://i.imgur.com/iIuTDZY.png" alt="Logo SMK TADIKAMESRA" class="logo-img">
+  <span class="spacer"></span>
+
+  <div class="menu-collapse" [class.show]="menuOpen">
+    <mat-list class="list-menu" role="list">
+      <mat-list-item (click)="gotoDiv('bannerId')"><span>Beranda</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('aboutId')"><span>About</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('newsId')"><span>News</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('jurusanId')"><span>Jurusan</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('ekstraId')"><span>Ekstrakulikuler</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('testiId')"><span>Kata Mereka</span></mat-list-item>
+    </mat-list>
+  </div>
+
+  <button mat-icon-button class="menu-btn" [class.show-menu-btn]="bannerIsScroll" aria-label="menu-btn" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div class="mobile-menu" [ngClass]="{ 'open': menuOpen }">
+    <mat-list class="list-menu">
+      <mat-list-item (click)="gotoDiv('bannerId')"><span>Beranda</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('aboutId')"><span>About</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('newsId')"><span>News</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('jurusanId')"><span>Jurusan</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('ekstraId')"><span>Ekstrakulikuler</span></mat-list-item>
+      <mat-list-item (click)="gotoDiv('testiId')"><span>Kata Mereka</span></mat-list-item>
+    </mat-list>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,153 @@
+/* Logo Styling */
+.logo-img {
+  height: 4rem; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+mat-toolbar.header-menu-section {
+  height: 5rem;
+  background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  animation: fadeIn 250ms ease-in;
+}
+
+/* Styling untuk logo dan teks logo */
+mat-toolbar.header-menu-section .logo {
+  width: 4rem;
+  height: auto;
+}
+
+mat-toolbar.header-menu-section .logo-text {
+  font-weight: bold;
+  color: white;
+}
+
+mat-toolbar.header-menu-section .spacer {
+  flex: 1 1 auto;
+}
+
+/* Styling untuk menu collapse (desktop) */
+mat-toolbar.header-menu-section .menu-collapse {
+  display: flex; /* Tampilkan pada desktop */
+  flex-flow: row;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu {
+  display: flex;
+  list-style-type: none;
+  flex-flow: row;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu mat-list-item {
+  overflow: visible !important;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item span {
+  color: white;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item:hover span,
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item span.active {
+  cursor: pointer;
+  color: #009d4e !important;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu .mat-mdc-list-item span {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 14px;
+}
+
+mat-toolbar.header-menu-section .menu-collapse .list-menu mat-list-item {
+  padding: 0 !important;
+}
+
+/* Style untuk menu button pada mobile */
+mat-toolbar.header-menu-section .menu-btn {
+  display: none; /* Sembunyikan menu button secara default */
+  color: rgb(0, 0, 0);
+  border: none !important;
+  background: transparent;
+}
+
+/* Styling untuk menu mobile */
+mat-toolbar.header-menu-section .mobile-menu {
+  display: none; /* Tersembunyi secara default */
+  position: fixed;
+  top: 5rem; /* Sesuaikan dengan tinggi toolbar */
+  left: 0;
+  width: 100%;
+  background-color: white; /* Warna background untuk menu mobile */
+  z-index: 1000;
+  border-top: 1px solid #ddd; /* Tambahkan border jika diperlukan */
+  color: black; /* Warna teks untuk menu mobile */
+}
+
+/* Tampilkan mobile menu saat terbuka */
+mat-toolbar.header-menu-section .mobile-menu.open {
+  display: block;
+}
+
+/* Styling untuk item menu di mobile */
+mat-toolbar.header-menu-section .mobile-menu .list-menu {
+  display: flex;
+  flex-direction: column; /* Layout kolom untuk menu mobile */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar.header-menu-section .mobile-menu .list-menu mat-list-item {
+  padding: 1rem; /* Padding untuk item menu */
+  color: black; /* Warna teks untuk item menu */
+}
+
+/* Styling saat hover pada item menu mobile */
+mat-toolbar.header-menu-section .mobile-menu .list-menu mat-list-item:hover {
+  background-color: #f0f0f0; /* Warna background saat hover */
+}
+
+/* Styling sticky-nav untuk desktop */
+mat-toolbar.header-menu-section.sticky-nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  animation: easeIn 150ms ease-in;
+}
+
+mat-toolbar.header-menu-section.sticky-nav .menu-collapse .list-menu .mat-mdc-list-item span {
+  color: black;
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 1300px) {
+  /* Tampilkan menu button pada tampilan mobile */
+  mat-toolbar.header-menu-section .menu-btn {
+    display: none; /* Sembunyikan menu button pada tampilan mobile */
+  }
+
+  /* Saat di-scroll, tampilkan menu button pada tampilan mobile */
+  mat-toolbar.header-menu-section.sticky-nav .menu-btn {
+    display: block; /* Tampilkan menu button */
+  }
+
+  mat-toolbar.header-menu-section .menu-collapse {
+    display: none; /* Sembunyikan menu collapse pada tampilan mobile */
+  }
+
+  mat-toolbar.header-menu-section .mobile-menu.open {
+    display: block; /* Tampilkan menu mobile saat terbuka */
+  }
+}
+
+/* Media query untuk tampilan desktop */
+@media (min-width: 769px) {
+  mat-toolbar.header-menu-section .menu-btn {
+    display: none; /* Sembunyikan menu button pada desktop */
+  }
+}

@@ -1,0 +1,13 @@
+<div class="ekstrakurikuler-section" id="ekstra">
+    <h2>Ekstrakurikuler</h2>
+    <div class="ekstrakurikuler-list">
+      <div class="ekstrakurikuler-item" *ngFor="let ekstrakurikuler of ekstrakurikulerList">
+        <img [src]="ekstrakurikuler.image" alt="{{ ekstrakurikuler.name }}" class="ekstrakurikuler-image"/>
+        <div class="ekstrakurikuler-content">
+          <h3>{{ ekstrakurikuler.name }}</h3>
+          <p>{{ ekstrakurikuler.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

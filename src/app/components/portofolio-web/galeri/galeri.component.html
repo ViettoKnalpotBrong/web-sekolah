@@ -1,0 +1,13 @@
+<div class="galeri-container">
+    <h2>Galeri Kegiatan</h2>
+    <div class="galeri-grid">
+      <div class="galeri-item" *ngFor="let kegiatan of kegiatanList">
+        <img [src]="kegiatan.image" [alt]="kegiatan.title" class="galeri-image">
+        <div class="galeri-content">
+          <h3>{{ kegiatan.title }}</h3>
+          <p>{{ kegiatan.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
