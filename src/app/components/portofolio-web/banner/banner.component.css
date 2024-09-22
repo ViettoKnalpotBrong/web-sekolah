@@ -1,13 +1,13 @@
 .banner-section {
   position: relative;
   width: 100%;
-  height: 90vh; /* Tinggi banner disesuaikan */
-  overflow: hidden; /* Mencegah overflow */
+  height: 90vh; /* Tinggi banner tetap sesuai */
+  overflow: hidden; /* Pastikan tidak ada elemen yang meluber */
 }
 
 .swiper-container.banner-swiper {
   width: 100%;
-  height: 100%; /* Penuh di dalam container */
+  height: 100%;
 }
 
 .swiper-wrapper {
@@ -19,14 +19,14 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%; /* Pastikan slide mencakup penuh container */
+  height: 100%;
 }
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Menutupi container tanpa distorsi */
+  min-width: 100%; /* Pastikan gambar memenuhi lebar container */
+  min-height: 100%; /* Pastikan gambar memenuhi tinggi container */
+  object-fit: cover; /* Gambar memenuhi container tanpa distorsi */
 }
 
 .banner-overlay {
