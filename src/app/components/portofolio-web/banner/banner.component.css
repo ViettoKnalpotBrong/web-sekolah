@@ -25,9 +25,9 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%; /* Lebar penuh container */
+  width: 100vw; /* Pastikan gambar memenuhi lebar container */
   height: 100%; /* Tinggi penuh container */
-  object-fit: cover; /* Memastikan gambar memenuhi container tanpa distorsi */
+  object-fit: cover; /* Pastikan gambar terpotong proporsional */
 }
 
 .banner-overlay {
